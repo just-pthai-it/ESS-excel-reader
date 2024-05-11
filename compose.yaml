@@ -1,0 +1,18 @@
+services:
+  server:
+    build:
+      context: .
+#      target: final
+    restart: unless-stopped
+    volumes:
+      - education-supporting-system_storage:/app/storage:ro
+    networks:
+      - education-supporting-system_rabbitmq-network
+
+networks:
+  education-supporting-system_rabbitmq-network:
+    external: true
+
+volumes:
+  education-supporting-system_storage:
+    external: true
