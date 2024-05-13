@@ -17,4 +17,4 @@ RUN #go test -v ./...
 
 #USER appuser
 
-ENTRYPOINT ["./app/ESS-excel-reader"]
+ENTRYPOINT ["./build/ESS-excel-reader"]
