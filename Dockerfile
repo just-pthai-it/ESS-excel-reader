@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o ./app/ESS-excel-reader ./app/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./build/ESS-excel-reader ./app/
 
 RUN #go test -v ./...
 
